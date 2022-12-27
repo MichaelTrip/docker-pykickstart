@@ -11,9 +11,7 @@ RUN apk update && \
 
 COPY src/requirements.txt /tmp
 COPY src/entrypoint.sh /
-RUN chmod +x /entrypoint.sh
-RUN pip --no-cache-dir install -r /tmp/requirements.txt
-RUN adduser -D -u 1001 pykickstart
+RUN chmod +x /entrypoint.sh && pip --no-cache-dir install -r /tmp/requirements.txt && adduser -D -u 1001 pykickstart
 USER pykickstart
 
 ENTRYPOINT [ "/entrypoint.sh" ]
