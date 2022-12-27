@@ -30,7 +30,7 @@ lint_kickstart_file:
   stage: verify
   image: docker.io/michaeltrip/pykickstart
   script:
-    - ksvalidator $CI_PROJECT_DIR/kickstart.ks
+    - ksvalidator --version=RHEL8 $CI_PROJECT_DIR/kickstart/kickstart.ks
 
 ```
 
