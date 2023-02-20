@@ -11,7 +11,7 @@ ENV DEFAULTCMD ksvalidator
 #
 RUN apk update
 RUN apk --no-cache upgrade
-RUN apk --no-cache add python3-dev~=3.10.9 py3-pip~=22.3.1 py3-requests~=2.28.1
+RUN apk --no-cache add python3-dev>3.10.10 py3-pip>22.3.1 py3-requests>2.28.1
 
 COPY src/requirements.txt /tmp
 COPY src/entrypoint.sh /
