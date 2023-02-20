@@ -43,7 +43,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: michaeltrip/pykickstart:latest, michaeltrip/pykickstart:build-${{ env.timestamp }}
-          platforms: aarch64, amd64
+        # platforms: aarch64, amd64
+          platforms: amd64
 
 
       - name: Image digest
